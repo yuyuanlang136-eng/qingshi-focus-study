@@ -13,10 +13,11 @@
 # testing
 /coverage
 
-# next.js
+# build output
+/dist/
 /.next/
 /.vinext/
-/out/
+/.wrangler/
 
 # misc
 .DS_Store
@@ -28,13 +29,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files（保留不含密钥的示例配置）
 .env*
+!.env.example
 
 # vercel
 .vercel
 
-/dist/
-/.wrangler/
 /outputs/
 /work/

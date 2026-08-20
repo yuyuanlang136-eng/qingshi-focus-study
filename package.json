@@ -1,49 +1,42 @@
 {
-  "name": "site-creator-vinext-starter",
-  "version": "0.1.0",
+  "name": "qingshi-focus-study",
+  "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": ">=22.13.0"
-  },
+  "description": "前端实训作业：基于 Vue 3 的轻量化在线专注学习工具",
+  "type": "module",
   "scripts": {
-    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
-    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --max-warnings=0",
+    "test": "vitest run",
+    "check": "npm run lint && npm run test && npm run build"
   },
   "dependencies": {
-    "axios": "^1.19.0",
-    "drizzle-orm": "0.45.2",
-    "echarts": "^6.1.0",
-    "lucide-react": "^1.33.0",
-    "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "axios": "^1.11.0",
+    "axios-mock-adapter": "^2.1.0",
+    "echarts": "^6.0.0",
+    "@lucide/vue": "^1.33.0",
+    "vue": "^3.5.18"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.37.1",
-    "@eslint/js": "9.39.4",
-    "@next/eslint-plugin-next": "16.2.6",
-    "@tailwindcss/postcss": "4.2.1",
-    "@types/node": "22.19.19",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.2",
-    "@vitejs/plugin-rsc": "0.5.26",
-    "drizzle-kit": "0.31.10",
-    "eslint": "9.39.4",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "7.1.1",
-    "globals": "16.4.0",
-    "react-server-dom-webpack": "19.2.6",
-    "tailwindcss": "4.2.1",
-    "typescript": "5.9.3",
-    "typescript-eslint": "8.59.3",
-    "vinext": "1.0.0-beta.2",
-    "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "@eslint/js": "^9.33.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^9.33.0",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.3.0",
+    "jsdom": "^26.1.0",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
   },
-  "type": "module"
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "overrides": {
+    "brace-expansion": "1.1.18",
+    "esbuild": "0.28.1",
+    "js-yaml": "4.3.1",
+    "ws": "8.21.0"
+  }
 }
